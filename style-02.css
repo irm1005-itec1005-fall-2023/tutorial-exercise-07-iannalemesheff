@@ -6,11 +6,45 @@
 
 /* Add your CSS here */
 
+.grid-container li {
+  margin:0.5rem;
+  padding:0.5rem;
+  border-radius:0.5rem;
+}
+.grid-container {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  grid-template-rows:repeat(2,1fr);
+  list-style:none;
+}
 
-
-
-
-
+.item-1 {
+background-color:rgb(76, 53, 97);
+grid-column-start:1;
+grid-column-end:3;
+}
+.item-2 {
+  background-color:rgb(53, 97, 90);
+  grid-column-start:3;
+  grid-column-end:4;
+}
+.item-3 {
+  background-color:rgb(97, 53, 80);
+  grid-column-start:4;
+  grid-column-end:-1;
+  grid-row-start:1;
+  grid-row-end:-1;
+}
+.item-4 {
+  background-color:rgb(90, 97, 53);
+  grid-column-start:1;
+  grid-column-end:2;
+}
+.item-5 {
+  background-color:rgb(53, 93, 97);
+  grid-column-start:2;
+  grid-column-end:4;
+}
 
 /*
   CORE PAGE CSS - DO NOT MODIFY

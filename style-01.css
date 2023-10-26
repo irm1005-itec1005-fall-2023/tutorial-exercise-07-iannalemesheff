@@ -6,10 +6,10 @@ TASK 1
 
 .grid-container-task-1 {
   display: grid;
-
+grid-template-columns: repeat(4,1fr);
+gap:2rem;
   /* Use grid-template-columns to set four equal width columns */
   /* Experiment with both the repeat() notation and writing out the full column definition */
-
   /* Set the gap to 2rem to add spacing around each grid item in the contaiern */
 }
 
@@ -21,17 +21,18 @@ TASK 1
 
 .grid-container-task-2 {
   display: grid;
-
+grid-template-columns: repeat(4,1fr);
+grid-template-rows: repeat(2,1fr);
+gap: 2rem;
   /* Use grid-template-columns to set four equal width columns */
-
   /* Use grid-template-rows to set two rows each with an equal height */
-
   /* Set the gap to 2rem to add spacing around each grid item in the contaiern */
 }
 
 .grid-container-task-2 .item-1 {
+grid-row-start: 1;
+grid-row-end: -1;
   /* Add a grid-row-start to have this item start at the top most row line */
-
   /*
     Add a grid-row-end to have the item start at the last row line
     HINT: https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-end
@@ -39,13 +40,14 @@ TASK 1
 }
 
 .grid-container-task-2 .item-2 {
+  grid-column-start: 3;
+  grid-column-end: -1;
+  grid-row-start: 2;
   /* Use grid-columnd-start to start at the 3rd column line */
-
   /*
     Use grid-column-end to end at the last column line
     HINT: Find out what "-1" does
   */
-
   /* Use grid-row-start to start at the 2nd row line */
 }
 
@@ -57,38 +59,48 @@ TASK 1
 
 .grid-container-task-3 {
   display: grid;
-
+grid-template-columns: repeat(4,1fr);
+grid-template-rows: repeat(4,1fr);
+gap: 2rem;
   /* Use grid-template-columns to set four equal width columns */
-
   /* Use grid-template-rows to set four rows each with an equal height */
-
   /* Set the gap to 2rem to add spacing around each grid item in the contaiern */
 }
 
 .grid-container-task-3 .item-1 {
+  grid-column-start: 1;
+  grid-column-end:4;
   /* grid-column-start at line 1 */
-
   /* grid-column-end at line 4 */
 }
 
 .grid-container-task-3 .item-2 {
+  grid-column-start:4;
+  grid-row-start:1;
+  grid-row-end:-1;
   /* grid-column-start at line 4 */
-
   /* grid-row-start at line 1 */
-
   /* grid-row-end at the last row line */
 }
 
 .grid-container-task-3 .item-3 {
   /* that's enough hints for now */
+  grid-row-start: 2;
+  grid-row-end:4;
 }
 
 .grid-container-task-3 .item-4 {
   /* You totally got this */
+  grid-column-start:2;
+  grid-column-end:4;
+  grid-row-start: 2;
+  grid-row-end:4;
 }
 
 .grid-container-task-3 .item-5 {
   /* Easy as pie */
+  grid-column-start:1;
+  grid-column-end:4;
 }
 
 /*
@@ -131,18 +143,34 @@ TASK 1
 
 .grid-container-task-4 .header {
   grid-area: header;
+  grid-column-start:1;
+  grid-column-end:-1;
+  grid-row-start:1;
+  grid-row-end:2;
 }
 
 .grid-container-task-4 .main {
   grid-area: main;
+  grid-column-start:2;
+  grid-column-end:5;
+  grid-row-start:2;
+  grid-row-end:3;
 }
 
 .grid-container-task-4 .side {
   grid-area: side;
+  grid-column-start:5;
+  grid-column-end:6;
+  grid-row-start:2;
+  grid-row-end:3;
 }
 
 .grid-container-task-4 .footer {
   grid-area: footer;
+  grid-column-start:1;
+  grid-column-end:-1;
+  grid-row-start:3;
+  grid-row-end:4;
 }
 
 /*
@@ -156,38 +184,47 @@ TASK 1
 
   /* Use grid-template-columns to set eight 8 equal width columns */
   grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8,1fr);
 }
 
 .grid-container-task-5 .item-1 {
-  /* Fill in here */
+  grid-column-start:1;
+  grid-row-start:1;
 }
 
 .grid-container-task-5 .item-2 {
-  /* Fill in here */
+  grid-column-start:2;
+  grid-row-start:2;
 }
 
 .grid-container-task-5 .item-3 {
-  /* Fill in here */
+  grid-column-start:3;
+  grid-row-start:3;
 }
 
 .grid-container-task-5 .item-4 {
-  /* Fill in here */
+  grid-column-start:4;
+  grid-row-start:4;
 }
 
 .grid-container-task-5 .item-5 {
-  /* Fill in here */
+  grid-column-start:5;
+  grid-row-start:5;
 }
 
 .grid-container-task-5 .item-6 {
-  /* Fill in here */
+  grid-column-start:6;
+  grid-row-start:6;
 }
 
 .grid-container-task-5 .item-7 {
-  /* Fill in here */
+  grid-column-start:7;
+  grid-row-start:7;
 }
 
 .grid-container-task-5 .item-8 {
-  /* Fill in here */
+  grid-column-start:8;
+  grid-row-start:8;
 }
 
 /*
